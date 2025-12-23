@@ -1,72 +1,87 @@
 @use "../base/variables.scss" as *;
 
 .card-item {
-  margin: auto;
+  width: 100%;
+  border: 1px solid $dark;
+  background-color: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+}
 
-  .card-title {
-    font-weight: 500;
-    font-size: 24px;
-    text-transform: uppercase;
-    width: 100%;
-  }
+.card-info {
+  display: grid;
+  grid-template-columns: 1fr;
+}
 
-  .card-img {
-    min-width: 300px;
-    height: 240px;
-  }
+.card-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
 
-  .card-p {
-    width: 100%;
-    padding: 1em;
-  }
+.card-title-btn {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 
-  .card-title-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    padding: 1em;
-  }
+.card-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.card-btn {
+  width: 110px;
+  height: 30px;
+  border: 1px solid $dark;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 10px;
+  align-self: center;
+}
+
+.card-p {
+  margin: 0;
+  padding: 1em;
+  border-top: 1px solid $dark;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 @media (min-width: 768px) {
-  .card-item {
-    width: 670px;
+  .card-info {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+  }
 
-    .card-title-btn {
-      justify-content: space-between;
-    }
+  .card-img {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+  }
 
-    .card-p {
-      width: 100%;
-      padding: 1em;
-    }
+  .card-title-btn {
+    justify-content: space-between;
+    padding: 1.25em;
+  }
+
+  .card-title {
+    font-size: 22px;
   }
 }
 
 @media (min-width: 1200px) {
-  .card-item {
-    width: 550px;
-
-    .card-title {
-      width: 170px;
-    }
-
-    .card-p {
-      width: 100%;
-    }
+  .card-title {
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1900px) {
-  .card-item {
-    width: 660px;
-
-    .card-title {
-      width: 280px;
-    }
-
-    .card-p {
-      width: 100%;
-    }
+  .card-title {
+    font-size: 24px;
   }
 }

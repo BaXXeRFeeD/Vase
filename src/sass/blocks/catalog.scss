@@ -4,6 +4,14 @@
   min-height: 500px;
   margin: auto;
 
+  &__filters,
+  &__grid {
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &__title {
     text-align: center;
     margin: auto;
@@ -17,11 +25,9 @@
   &__filters {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     border: 1px solid $dark;
-    margin: auto;
-    max-width: 340px;
-    text-align: center;
+    text-align: left;
 
     .catalog__filter {
       width: 135px;
@@ -35,8 +41,7 @@
   }
 
   &__grid {
-    margin: 2em auto;
-    width: 340px;
+    margin-top: 2em;
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
@@ -59,9 +64,13 @@
     &__title {
       font-size: 36px;
     }
-    &__grid {
-      width: 700px;
 
+    &__filters,
+    &__grid {
+      max-width: 700px;
+    }
+
+    &__grid {
       &::after {
         content: '';
         position: absolute;
@@ -73,9 +82,6 @@
         border-left: 2px solid #2f2f2f;
       }
     }
-    &__filters {
-      max-width: 500px;
-    }
   }
 }
 
@@ -84,16 +90,37 @@
     &__title {
       font-size: 40px;
     }
+
+    &__filters,
     &__grid {
-      width: 1052px;
+      max-width: 1052px;
     }
   }
 }
 
 @media (min-width: 1900px) {
   .catalog {
+    &__filters,
     &__grid {
-      width: 1410px;
+      max-width: 1410px;
     }
   }
+}
+
+.catalog-item {
+  border: 1px solid $dark;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.catalog-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.catalog-info {
+  border-top: 1px solid $dark;
+  padding: 10px;
 }

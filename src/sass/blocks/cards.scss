@@ -18,11 +18,13 @@
   }
 
   &__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2em;
-    width: 340px;
+    justify-items: center;
   }
 }
 
@@ -32,7 +34,10 @@
       font-size: 36px;
     }
     &__grid {
-      width: 700px;
+      max-width: 700px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      justify-items: stretch;
     }
   }
 }
@@ -43,7 +48,7 @@
       font-size: 40px;
     }
     &__grid {
-      width: 1200px;
+      max-width: 1200px;
     }
   }
 }
@@ -51,7 +56,7 @@
 @media (min-width: 1900px) {
   .cards {
     &__grid {
-      width: 1400px;
+      max-width: 1400px;
     }
   }
 }
