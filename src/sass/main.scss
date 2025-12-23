@@ -1,0 +1,17 @@
+@use "libs/modern-normalize.min.css";
+@use "base/reset.scss";
+
+@use "blocks/site-header.scss";
+@use "blocks/nav-menu.scss";
+@use "blocks/hero.scss";
+@use "blocks/about-section.scss";
+@use "blocks/contact-form.scss";
+@use "blocks/site-footer.scss";
+@use "blocks/catalog.scss";
+@use "blocks/swiper-section.scss";
+@use "blocks/info-section.scss";
+@use "blocks/find-us.scss";
+@use "blocks/cards.scss";
+@use "blocks/card-item.scss";
+
+@use "ui/ui-elements.scss";

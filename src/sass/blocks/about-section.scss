@@ -1,0 +1,57 @@
+@use "../base/variables.scss" as *;
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 0;
+
+  &__title {
+    padding-top: 10px;
+  }
+
+  &__container {
+    width: 340px;
+    margin: auto;
+  }
+
+  &__text {
+    &-accent {
+      font-weight: 500;
+      color: $ceramic;
+    }
+    font-weight: 400;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    padding: 16px 6em;
+
+    &__container {
+      width: 530px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .about-section {
+    padding: 16px 2em;
+
+    &__item {
+      width: 420px;
+
+      &--workshop {
+        width: 640px;
+      }
+    }
+
+    &__container {
+      display: flex;
+      padding: 1em;
+      gap: 3em;
+      width: auto;
+    }
+  }
+}

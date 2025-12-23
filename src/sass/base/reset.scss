@@ -1,0 +1,107 @@
+@use "variables.scss" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+  margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+html {
+  font-family: "Barlow", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $light;
+}
+
+.container {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.p-link {
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $dark;
+}
+
+.foot-header,
+.footer-headers {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 100%;
+}
+
+.foot-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.footer-input {
+  width: 100%;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom-color: $ui-active;
+  background-color: $dark;
+  color: $ui-active;
+  font-size: 14px;
+}
+
+.footer-checkbox {
+  height: 15px;
+  width: 15px;
+}
+
+.footer-icons {
+  height: 24px;
+  width: 24px;
+}
+
+.footer-copyright {
+  display: block;
+  text-align: center;
+  background-color: $dark;
+  color: $light;
+  padding: 2em;
+}
+
+.checkbox {
+  display: flex;
+  gap: 0.2em;
+}
+
+.forms-text {
+  font-weight: 400;
+  font-size: 14px;
+}

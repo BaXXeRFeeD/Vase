@@ -1,0 +1,146 @@
+@use "../base/variables.scss" as *;
+
+.hero {
+  padding-top: 50px;
+
+  &__img {
+    margin: 40px auto 0;
+    box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  &__btn {
+    margin: 18px auto 0;
+  }
+
+  &__title {
+    margin-block-start: 50px;
+    padding-inline: 5px;
+  }
+
+  &__big-img {
+    display: none;
+    position: absolute;
+  }
+
+  &__nav {
+    display: none;
+  }
+
+  &__im-btn {
+    animation: slide-from-right 1s ease 0ms forwards;
+  }
+}
+
+@keyframes slide-from-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    &__nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5em;
+      padding-top: 1.5em;
+    }
+
+    &__cont {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__img {
+      width: 230px;
+      height: 320px;
+    }
+
+    &__link {
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: 20px;
+      text-decoration: none;
+      color: $dark;
+    }
+
+    h1 {
+      text-align: left;
+      align-content: end;
+      padding: 3em 0;
+      width: 330px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+    &__big-img {
+      width: 450px;
+      height: 630px;
+      display: flex;
+    }
+
+    &__container {
+      padding-top: 50px;
+    }
+
+    &__cont {
+      justify-content: flex-end;
+      gap: 4em;
+    }
+
+    &__nav {
+      justify-content: center;
+    }
+
+    h1 {
+      width: 329px;
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .hero {
+    &__big-img {
+      width: 640px;
+      height: 900px;
+      display: flex;
+    }
+
+    &__cont {
+      height: 700px;
+      gap: 4em;
+      justify-content: right;
+      padding-right: 0;
+    }
+
+    &__container {
+      padding-left: 10em;
+      padding-right: 10em;
+    }
+
+    &__img {
+      width: 330px;
+      height: 460px;
+    }
+
+    &__title {
+      width: 440px;
+    }
+
+    &__im-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+}

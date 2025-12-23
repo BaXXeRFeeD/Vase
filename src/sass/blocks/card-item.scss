@@ -1,0 +1,72 @@
+@use "../base/variables.scss" as *;
+
+.card-item {
+  margin: auto;
+
+  .card-title {
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  .card-img {
+    min-width: 300px;
+    height: 240px;
+  }
+
+  .card-p {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .card-title-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-item {
+    width: 670px;
+
+    .card-title-btn {
+      justify-content: space-between;
+    }
+
+    .card-p {
+      width: 100%;
+      padding: 1em;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-item {
+    width: 550px;
+
+    .card-title {
+      width: 170px;
+    }
+
+    .card-p {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: 1900px) {
+  .card-item {
+    width: 660px;
+
+    .card-title {
+      width: 280px;
+    }
+
+    .card-p {
+      width: 100%;
+    }
+  }
+}

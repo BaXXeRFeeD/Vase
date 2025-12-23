@@ -1,0 +1,43 @@
+@use "../base/variables.scss" as *;
+
+.info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 20px;
+  margin: auto;
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  &__img {
+    width: 600px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .info-section {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .info-section {
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1140px;
+    margin: auto;
+  }
+}
+
+@media (min-width: 1900px) {
+  .info-section {
+    max-width: 1440px;
+  }
+}

@@ -1,0 +1,57 @@
+@use "../base/mixins.scss" as *;
+@use "../base/variables.scss" as *;
+
+.btn-default {
+  @include button;
+  width: 230px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.btn-request {
+  @include button;
+  max-width: 220px;
+  height: 40px;
+  font-size: 16px;
+}
+
+.btn-submit{
+  @include button;
+  width: 90px;
+  height: 40px;
+  font-size: 16px;
+  border-color: #FAFAFA;
+  background-color: $dark;
+  color: #FAFAFA;
+}
+
+.btn-read {
+  @include button;
+  width: 145px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.title-h1 {
+  @include title;
+  font-size: 24px;
+  font-style: normal;
+}
+
+.title-h1-italic {
+  @include title;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.title-h2-medium {
+  @include title;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.title-h3-medium {
+  @include title;
+  font-size: 20px;
+  font-weight: 500;
+}
